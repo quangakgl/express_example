@@ -6,12 +6,16 @@
 </head>
 <body>
 <h1>Tổng hai số</h1>
+ <!--Sử dụng phương thức get-->
 <form action = "/" method = "GET">
+    <!--sử dụng nunjucks truyền dữ liêu a vào input-->
     a: <input type = "text" name = "a" value="{{a}}"><br>
+    <!--sử dụng nunjucks truyền dữ liêu a vào input-->
     b: <input type = "text" name = "b" value="{{b}}"><br>
-    <input type="submit" name="submit" value="Calculate">
-
+    <!--sử dụng nunjucks truyền dữ liêu vào input bên dưới-->
+    <input type="submit" name="submit" value="Sum">
 </form>
+    <!--sử dụng nunjucks truyền dữ liêu c vào input-->
     <input type="text" value="{{c}}">
 </body>
 </html>
