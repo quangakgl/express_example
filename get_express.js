@@ -4,12 +4,8 @@
 const express = require('express');
 const app = express();
 const nunjucks = require('nunjucks');
-const fs = require('fs');
 
 const bodyParser = require("body-parser");
-
-const path = require('path');
-const shortid = require('shortid');
 
 nunjucks.configure('views', {
     autoescape: true,
@@ -18,7 +14,7 @@ nunjucks.configure('views', {
     watch: true
 });
 
-app.use(express.static('views'));
+//app.use(express.static('views'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -41,7 +37,7 @@ app.get('/', (req, res) => {
     let b = parseFloat(req.query.b) ;
     let c = a + b ;
 
-    res.render('index', {c: c});
+    res.render('index.html', {c: c});
 })
 app.listen(4000, () => {
     console.log('listen port 4000')
